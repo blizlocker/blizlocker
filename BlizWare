@@ -26,6 +26,14 @@ MainSection:NewButton("Fake Macro (Z)", "This macro is like speed walk", functio
     loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Fake-Macro"))();
 end)
 
+MainSection:NewButton("TP Tool", "This gives you TP TOOL in your inv.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/TP%20Tool"))();
+end)
+
+MainSection:NewButton("Ctrl + Click TP", "Press Ctrl + Click and it will tp to your mouse direction.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Mirgarr/tp-script-roblox/main/tp"))();
+end)
+
 MainSection:NewButton("Animation Pack", "ANIMATION PACK.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Compwnter/Storage/main/miscellaneous/animation-pack.lua"))();
 end)
