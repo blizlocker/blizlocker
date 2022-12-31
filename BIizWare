@@ -139,6 +139,10 @@ AntiLockSection:NewButton("Eod's Anti Lock", "ONLY CLICK ONCE!", function()
     loadstring(game:HttpGet('https://github.com/reallykaren/linkup/raw/main/linkv2'))();
 end)
 
+AntiLockSection:NewButton("Wendigos Anti Lock (Right Shift)", "ONLY CLICK ONCE!", function()
+    loadstring(game:HttpGet('https://scripts.luawl.com/13979/wendigoware.lua'))()
+end)
+
 AntiLockSection:NewButton("Anti Lock (X)", "ONLY CLICK ONCE!", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/AntiLock"))();
 end)
@@ -147,8 +151,20 @@ end)
 local Resolver = Window:NewTab("Resolver")
 local ResolverSection = Resolver:NewSection("Resolver")
 
-ResolverSection:NewButton("Resolver", "This will Resolve anti lock opponent.", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Resolver"))();
+ResolverSection:NewButton("Resolver 1", "This will Resolve anti lock opponent.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Resolver1"))();
+end)
+
+ResolverSection:NewButton("Resolver 2", "This will Resolve anti lock opponent.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Resolver2"))();
+end)
+
+ResolverSection:NewButton("Resolver 3", "This will Resolve anti lock opponent.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Resolver3"))();
+end)
+
+ResolverSection:NewButton("Resolver 4", "This will Resolve anti lock opponent.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Resolver4"))();
 end)
 
 -- GodMode
