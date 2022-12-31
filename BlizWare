@@ -1,0 +1,156 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("BlizWare", "Ocean")
+
+-- Main
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+
+MainSection:NewButton("Aim-Viewer", "ONLY CLICK ONCE!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/AimViewer"))();
+end)
+
+MainSection:NewButton("FPS GUI (E)", "ONLY CLICK ONCE OR IT WILL BUG!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/FPS%20GUI"))();
+end)
+
+MainSection:NewButton("Streamable-Silent-Aim", "This gives you silent aim that is streamable.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Streamable-Lock"))();
+end)
+
+MainSection:NewButton("Real Macro (Q)", "This is real macro you need to use animation.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Real%"))();
+end)
+
+MainSection:NewButton("Fake Macro (Z)", "This macro is like speed walk", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Fake-Macro"))();
+end)
+
+MainSection:NewButton("Animation Pack", "ANIMATION PACK.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Compwnter/Storage/main/miscellaneous/animation-pack.lua"))();
+end)
+
+MainSection:NewButton("Anonymous", "removes all", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/D34THEV1L/DaHoodScripts/main/Anonymous.Lua"))();
+end)
+
+-- Combat
+local Combat = Window:NewTab("Combat")
+local CombatSection = Combat:NewSection("Combat")
+
+CombatSection:NewToggle("Super Human", "Jump high and Walk fast", function(state)
+    if state then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
+    else
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    end
+end)
+
+CombatSection:NewButton("Tool Reach", "This will expand Tool reach", function()
+    for i, v in pairs(game:GetService"Players".LocalPlayer.Character:GetChildren()) do
+        if v:isA("Tool") then
+            local a = Instance.new("SelectionBox", v.Handle)
+            a.Adornee = v.Handle
+            v.Handle.Size = Vector3.new(50, 50, 50)
+            v.Handle.Transparency = 1
+            v.GripPos = Vector3.new(0, 0, 0)
+        end
+end 
+end)
+
+CombatSection:NewButton("FreeFist", "Reset to fix hand", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/D34THEV1L/DaHoodScripts/main/FreeFist%20%5BQ%5D.Lua"))();
+end)
+
+CombatSection:NewButton("Anti Slow", "This will activate anti slow", function()
+    local mt = getrawmetatable(game)
+local backup
+backup = hookfunction(mt.__newindex, newcclosure(function(self, key, value)
+if key == "WalkSpeed" and value < 16 then
+value = 16
+end
+return backup(self, key, value)
+end))
+end)
+
+CombatSection:NewButton("No Jump Cooldown", "You can jump many times", function()
+    --supports auto execute just put it in auto exc folder as a .txt
+    if not game.IsLoaded(game) then 
+        game.Loaded.Wait(game.Loaded);
+    end
+
+    local IsA = game.IsA;
+    local newindex = nil 
+
+    newindex = hookmetamethod(game, "__newindex", function(self, Index, Value)
+        if not checkcaller() and IsA(self, "Humanoid") and Index == "JumpPower" then 
+            return
+        end
+
+        return newindex(self, Index, Value);
+    end)
+end)
+
+CombatSection:NewButton("Anti Fling", ".", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/AntiFling"))();
+end)
+
+CombatSection:NewButton("Anti Bag", ".", function()
+    local LP = game.Players.LocalPlayer;
+
+    for i,v in ipairs(LP.Character:GetDescendants()) do
+        if v.Name == "Christmas_Sock" then v:Destroy()
+            end
+        end
+            
+        LP.Character.ChildAdded:Connect(function()
+        wait(0.3)
+        for i,v in ipairs(LP.Character:GetDescendants()) do
+        if v.Name == "Christmas_Sock" then v:Destroy()
+        end
+        end
+        end)
+end)
+
+CombatSection:NewButton("No Recoil", ".", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Compwnter/Storage/main/miscellaneous/no-recoil.lua"))();
+end)
+
+CombatSection:NewButton("Arrest All", "CANNOT BE STOP", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/D34THEV1L/DaHoodScripts/main/Arrest%20All.Lua"))();
+end)
+
+-- AntiLock
+local AntiLock = Window:NewTab("AntiLock")
+local AntiLockSection = AntiLock:NewSection("AntiLock")
+
+
+AntiLockSection:NewButton("Eod's Anti Lock", "ONLY CLICK ONCE!", function()
+    loadstring(game:HttpGet('https://github.com/reallykaren/linkup/raw/main/linkv2'))();
+end)
+
+AntiLockSection:NewButton("Anti Lock (X)", "ONLY CLICK ONCE!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/AntiLock"))();
+end)
+
+-- Resolver
+local Resolver = Window:NewTab("Resolver")
+local ResolverSection = Resolver:NewSection("Resolver")
+
+ResolverSection:NewButton("Resolver", "This will Resolve anti lock opponent.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Resolver"))();
+end)
+
+-- GodMode
+local GodMode = Window:NewTab("GodMode")
+local GodModeSection = GodMode:NewSection("GodMode")
+
+GodModeSection:NewButton("GodMode Guns", "Only use with Guns", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Compwnter/Storage/main/god-mode-things/godmode-guns.lua"))();
+end)
+
+GodModeSection:NewButton("GodMode Melee", "Only use with Melees", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Compwnter/Storage/main/god-mode-things/godmode-melees.lua"))();
+end)
