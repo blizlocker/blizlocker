@@ -1,7 +1,7 @@
 getgenv().Settings = {
 	rewrittenmain = {
 		Enabled = true,
-		Key = "q",     --CHANGE TOGGLE KEY HERE!!--
+		Key = "f",     --CHANGE TOGGLE KEY HERE!!--
 		DOT = true,
 		FOV = math.huge,
 	}
