@@ -6,7 +6,7 @@ local creds = "Alxy38"
 if lc:IsInGroup(group) then -- IS In group is the roblox API Reference pretty self explanatory 
       print("Is In Group")
 else
-      lc:kick("Join the group [Copied to clipboard]") -- Doesn't have to be kicked
+      lc:kick("Not In Group") -- Doesn't have to be kicked
       setclipboard(grouplink)
 end
 
@@ -30,6 +30,10 @@ end)
 
 MainSection:NewButton("Streamable-Silent-Aim", "This gives you silent aim that is streamable.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Streamable-Lock"))();
+end)
+
+MainSection:NewButton("Dot Hitbox (Just Dot no aimlock)", "This doesn't give you aimlock or silent aim.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Dot-Hitbox"))();
 end)
 
 MainSection:NewButton("Real Macro (Q)", "This is real macro you need to use animation.", function()
