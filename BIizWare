@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("BlizWare", "Ocean")
+local Window = Library.CreateLib("BlizWare", "DarkTheme")
 
 -- Main
 local Main = Window:NewTab("Main")
@@ -45,6 +45,10 @@ end)
 -- Combat
 local Combat = Window:NewTab("Combat")
 local CombatSection = Combat:NewSection("Combat")
+
+CombatSection:NewButton("Fly (X)", "If died or reset click again.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Fly"))();
+end)
 
 CombatSection:NewToggle("Super Human", "Jump high and Walk fast", function(state)
     if state then
@@ -135,7 +139,7 @@ local AntiLock = Window:NewTab("AntiLock")
 local AntiLockSection = AntiLock:NewSection("AntiLock")
 
 
-AntiLockSection:NewButton("Eod's Anti Lock", "ONLY CLICK ONCE!", function()
+AntiLockSection:NewButton("Eod's Anti Lock (V)", "ONLY CLICK ONCE!", function()
     loadstring(game:HttpGet('https://github.com/reallykaren/linkup/raw/main/linkv2'))();
 end)
 
@@ -145,6 +149,10 @@ end)
 
 AntiLockSection:NewButton("Anti Lock (X)", "ONLY CLICK ONCE!", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/AntiLock"))();
+end)
+
+AntiLockSection:NewButton("Legit Underground AA", "ONLY CLICK ONCE!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/Legit-Underground-AA"))();
 end)
 
 -- Resolver
@@ -178,3 +186,17 @@ end)
 GodModeSection:NewButton("GodMode Melee", "Only use with Melees", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Compwnter/Storage/main/god-mode-things/godmode-melees.lua"))();
 end)
+
+GodModeSection:NewButton("GodBullet", ".", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/blizlocker/blizlocker/main/GodBullet"))();
+end)
+
+-- Misc
+local Misc = Window:NewTab("Misc")
+local MiscSection = Misc:NewSection("Misc")
+
+MiscSection:NewKeybind("Toggle UI", "Click to open or close.", Enum.KeyCode.B, function()
+	Library:ToggleUI()
+end)
+
+MiscSection:NewLabel("Made by si idol pala to eh#5603")
