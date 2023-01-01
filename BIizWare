@@ -1,3 +1,17 @@
+local lc = game:GetService("Players").LocalPlayer -- Use GetService it is important because some games change Players so use that instead of game.Players!
+local group = 3220679 -- Roblox Fan Group but put your group ID HERE
+local grouplink = "https://www.roblox.com/groups/3220679/MCHikens#!/about"
+local creds = "Alxy38"
+
+if lc:IsInGroup(group) then -- IS In group is the roblox API Reference pretty self explanatory 
+      print("Is In Group")
+else
+      lc:kick("Join the group [Copied to clipboard]") -- Doesn't have to be kicked
+      setclipboard(grouplink)
+end
+
+print(creds)
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("BlizWare", "DarkTheme")
 
