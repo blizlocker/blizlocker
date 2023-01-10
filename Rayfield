@@ -884,7 +884,7 @@ function BlizWareLibrary:CreateWindow(Settings)
 	LoadingFrame.Title.Text = Settings.LoadingTitle or "BlizWare Interface Suite"
 	LoadingFrame.Subtitle.Text = Settings.LoadingSubtitle or "by Sirius"
 	if Settings.LoadingTitle ~= "BlizWare Interface Suite" then
-		LoadingFrame.Version.Text = "si idol pala to eh#5603"
+		LoadingFrame.Version.Text = "Bliz"
 	end
 	Topbar.Visible = false
 	Elements.Visible = false
